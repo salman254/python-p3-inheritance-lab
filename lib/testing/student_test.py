@@ -1,13 +1,13 @@
-#!/usr/bin/env python3
+from lib.student import Student
+from lib.user import User
 
-from student import Student
-from user import User
-        
 class TestStudent:
     '''Class "Student" in student.py'''
 
     def test_is_subclass(self):
         '''is a subclass of "User".'''
+        # Use the fully qualified class reference for the test
+        from lib.user import User
         assert(User in Student.__bases__)
 
     def test_initializes_with_names(self):
